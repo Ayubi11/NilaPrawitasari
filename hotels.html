@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Hotel di Indonesia</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url('batik.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #1da8d3;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #000000;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.2s;
+        }
+
+        .hotel-card:hover {
+            transform: scale(1.05);
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hotel-card-body {
+            padding: 20px;
+        }
+
+        .hotel-card-body h3 {
+            margin: 0;
+            color: #d40693;
+        }
+
+        .hotel-card-body p {
+            margin: 10px 0 0;
+            color: #333;
+        }
+
+        .hotel-card-body .price {
+            font-weight: bold;
+            color: #15d50a;
+        }
+
+        .hotel-card-body .book-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f38d08;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .map {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .map iframe {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Destination</a></li>
+                <li><a href="hotels.html">Hotel</a></li>
+            </ul>
+        </nav>
+        <img src="wonderful.webp" alt="Logo" class="logo">  
+    </header>
+    <section class="content">
+        <h2>Daftar Hotel Rekomendasi</h2>
+        <div class="hotel-list">
+            <div class="hotel-card">
+                <img src="hotelindonesia.webp" alt="Hotel Jakarta">
+                <div class="hotel-card-body">
+                    <h3>Hotel Indonesia</h3>
+                    <p>Alamat: Jl. M.H. Thamrin No.1, Menteng, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310</p>
+                    <p>Harga: <span class="price">Rp 2.956.800/malam</span></p>
+                    <p>Fasilitas: Wi-Fi, Outdoor Pool, Spa, Restoran, Laundry, Airport Shuttle, Hot tub</p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5147112232958!2d106.8197822749902!3d-6.1956128937920525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f421963cd607%3A0x503cb9e9306e657a!2sHotel%20Indonesia%20Kempinski%20Jakarta!5e0!3m2!1sen!2sid!4v1720095009158!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a href="booking.html" class="book-button">Booking Hotel</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="hotelmelia.jpg" alt="Hotel Makassar">
+                <div class="hotel-card-body">
+                    <h3>Hotel Melia Makassar</h3>
+                    <p>Alamat: Jl. Jl. A. Mappanyukki No.17, Kunjung Mae, Kec. Mariso, Kota Makassar, Sulawesi Selatan 90134</p>
+                    <p>Harga: <span class="price">Rp 1.089.999/malam</span></p>
+                    <p>Fasilitas: Wi-Fi, Hot Tub, Bar, Restoran, Outdoor Pool, Fitness center, Free Breakfast</p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.709387294025!2d119.4122048749823!3d-5.150396794826866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbf1d56fd89b107%3A0x7a29cab9d7bd7c9a!2sMeli%C3%A1%20Makassar!5e0!3m2!1sen!2sid!4v1720095762542!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a href="booking.html" class="book-button">Booking Hotel</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="ayanakomodohotel.jpg" alt="Hotel Nusa Tenggara Timur">
+                <div class="hotel-card-body">
+                    <h3>AYANA Komodo Waecicu Beach Hotel</h3>
+                    <p>Alamat: Jl. Pantai Waecicu, Labuan Bajo, Kec. Komodo, Kabupaten Manggarai Barat, Nusa Tenggara Tim. 86554</p>
+                    <p>Harga: <span class="price">Rp 4.728.342/malam</span></p>
+                    <p>Fasilitas: Wi-Fi, Beach access, Fitness Center, Spa, Bar, Restoran</p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.3234809469177!2d119.87189857501238!3d-8.467891091572726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db46761a6c4d03d%3A0x3eff1256d3efd22c!2sAYANA%20Komodo%20Waecicu%20Beach!5e0!3m2!1sen!2sid!4v1720096076968!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a href="booking.html" class="book-button">Booking Hotel</a>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="astonhotel.jpg" alt="Hotel Papua">
+                <div class="hotel-card-body">
+                    <h3>ASTON Sorong Hotel & Confer ence Center</h3>
+                    <p>Alamat: Jl. Basuki Rahmat, Malaingkedi, Kec. Sorong Utara, Kota Sorong, Papua Bar. 98412•(0951) 3131202</p>
+                    <p>Harga: <span class="price">Rp 1.588.309/malam</span></p>
+                    <p>Fasilitas: Wi-Fi,Breakfast, Beach Access, Spa, Bar, Restoran</p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3383381196795!2d131.29058427496503!3d-0.8887466991026483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d595554e5fbb893%3A0x110a6a5f0a67a7f7!2sASTON%20Sorong%20Hotel%20%26%20Conference%20Center!5e0!3m2!1sen!2sid!4v1720096379345!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a href="booking.html" class="book-button">Booking Hotel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

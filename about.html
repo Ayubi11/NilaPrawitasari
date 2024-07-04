@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebudayaan Indonesia</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url('batik.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #1da8d3;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #000000;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin: 0;
+            color: #1da8d3;
+        }
+
+        .card-body p {
+            margin: 10px 0 0;
+            color: #333;
+        }
+
+        .btn-hotel {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 0;
+            background-color: #f38d08;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-hotel:hover {
+            background-color: #060202;
+        }
+
+        /* Styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Destination</a></li>
+                <li><a href="hotels.html">Hotel</a></li>
+            </ul>
+        </nav>
+        <img src="wonderful.webp" alt="Logo" class="logo">
+    </header>
+    <section class="content">
+        <h2>Tempat Wisata Rekomendasi</h2>
+        <div class="gallery">
+            <div class="card" onclick="openModal('modal1')">
+                <img src="jakarta2.jpg" alt="Kota Tua Jakarta">
+                <div class="card-body">
+                    <h3>Kota Tua, West Jakarta City, DKI Jakarta</h3>
+                    <a href="hotels.html" class="btn-hotel">Lihat Hotel Terdekat</a>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('modal2')">
+                <img src="pantailosari.webp" alt="Wisata Makassar">
+                <div class="card-body">
+                    <h3>Pantai Losari , Sulawesi Selatan, Indonesia.</h3>
+                    <a href="hotels.html" class="btn-hotel">Lihat Hotel Terdekat</a>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('modal3')">
+                <img src="desawaerebo.jpg" alt="Desa Wae Rebo">
+                <div class="card-body">
+                    <h3>WaeRebo , Satar Mese Barat, East Nusa Tenggara.</h3>
+                    <a href="hotels.html" class="btn-hotel">Lihat Hotel Terdekat</a>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('modal4')">
+                <img src="rajaampat.webp" alt="Raja Ampat">
+                <div class="card-body">
+                    <h3>Raja Ampat, Kota Sorong, Provinsi Papua Barat Daya.</h3>
+                    <a href="hotels.html" class="btn-hotel">Lihat Hotel Terdekat</a>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak card sesuai kebutuhan -->
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Kota Tua Jakarta</h2>
+            <img src="jakarta2.jpg" alt="Kota Tua Jakarta">
+            <p>Kota Tua Jakarta, atau "Old Batavia," mempesona wisatawan dengan bangunan kolonial Belanda yang megah dan suasana yang mengajak Anda melangkah ke masa lalu. Di sini, Anda bisa menjelajahi Museum Fatahillah yang bersejarah, menikmati seni jalanan, atau mencicipi kuliner khas di kafe-kafe tempo dulu. Kawasan ini hidup dengan aktivitas menarik, seperti pertunjukan seni dan pasar malam, menjadikannya destinasi wajib bagi siapa pun yang ingin merasakan keindahan sejarah dan budaya Jakarta.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Pantai Losari</h2>
+            <img src="pantailosari.webp" alt="Wisata Makassar">
+            <p>Pantai Losari Makassar adalah sebuah pantai yang terletak di sebelah barat Kota Makassar, Provinsi Sulawesi Selatan, Indonesia. Pantai ini menjadi tempat bagi warga Makassar untuk menghabiskan waktu pada pagi, sore, dan malam hari menikmati pemandangan matahari tenggelam yang sangat indah.Dahulu, pantai ini dikenal dengan pusat makanan laut dan ikan bakar di malam hari karena para penjual dan pedagang hanya beroperasi pada malam hari, serta disebut-sebut sebagai warung terpanjang di dunia karena warung-warung tenda berjejer di sepanjang pantai yang panjangnya kurang lebih satu kilometer. Salah satu penganan khas Makassar yang dijajak di warung-warung tenda itu adalah pisang epe pisang mentah yang dibakar, kemudian dibuat pipih, dan dicampur dengan air gula merah Paling enak dimakan saat masih hangat dengan berbagai topping diatasnya seperti parutan keju, selai stroberi, dll.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Desa Wae Rebo</h2>
+            <img src="desawaerebo.jpg" alt="Desa Wae Rebo">
+            <p>Wae Rebo atau Waerebo adalah sebuah desa adat terpencil dan misterius di Kabupaten Manggarai, Nusa Tenggara Timur. Wae Rebo merupakan salah satu destinasi wisata budaya di Kabupaten Manggarai.Terletak di ketinggian 1.200 meter di atas permukaan laut. Di kampung ini hanya terdapat 7 rumah utama atau yang disebut sebagai Mbaru Niang. Wae Rebo dinyatakan UNESCO sebagai Warisan Budaya Dunia pada Agustus 2012 dengan menyisihkan 42 negara lainnya.Wae sendiri dalam bahasa manggarai artinya ialah "air". Penulisan waerebo menggunakan 1 kata dan tidak memakai spasi seperti yang ditulis media. Desa Waerebo sendiri sudah berumur 1200 tahun dan sudah memasuki generasi ke 20. Dimana 1 generasi berusia 60 tahun lamanya.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Raja Ampat</h2>
+            <img src="rajaampat.webp" alt="Raja Ampat">
+            <p>Raja Ampat adalah salah satu kabupaten di provinsi Papua Barat Daya, Indonesia. Ibukota kabupaten ini terletak di Waisai, dimana Waisai menjadi pusat pemerintahan Kabupaten Raja Ampat. Kabupaten ini memiliki 610 pulau, termasuk kepulauan Raja Ampat.
+Raja Ampat dikenali dengan keindahan laut dan pemandangannya. Pulau ini diakui sebagai rumah bagi keanekaragaman hayati terumbu karang terbesar di dunia. Dengan lebih dari 550 varietas karang yang berbeda, 700 jenis moluska, dan 1.427 spesies ikan yang berbeda, wilayah ini merupakan pusat keanekaragaman hayati laut yang signifikan. Tujuh puluh lima persen dari seluruh spesies karang yang diketahui dapat ditemukan di perairan sekitar Kepulauan Raja Ampat, yang merupakan rumah bagi beberapa spesies paling beragam di dunia.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

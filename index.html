@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesia Tourism</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1da8d3;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin: 0;
+            color: rgb(249, 249, 249);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            max-width: 800px;
+            color: rgb(244, 242, 242);
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #000000;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin: 0;
+            color: #f38d08;
+        }
+
+        .card-body p {
+            margin: 10px 0 0;
+            color: #333;
+        }
+
+        footer {
+            background-color: #1da8d3;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            border-top: 1px solid #e7e7e7;
+        }
+
+        footer p {
+            margin: 0;
+            color: #000000;
+        }
+
+        .logo {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Destination</a></li>
+                <li><a href="hotels.html">Hotel</a></li>
+            </ul>
+        </nav>
+        <img src="wonderful.webp" alt="Logo" class="logo">
+    </header>
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="cinematik.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to the Indonesian Tourism Website</h1>
+            <button onclick="location.href='about.html'">Explore Destinations</button>
+        </div>
+    </section>
+    <section class="content">
+        <h2>Tourist Destination</h2>
+        <div class="gallery">
+            <div class="card" onclick="location.href='about.html?place=place1'">
+                <img src="jakarta.jpg" alt="Tempat Wisata 1">
+                <div class="card-body">
+                    <h3>JAKARTA</h3>
+                    <p>Jakarta adalah ibu kota yang sibuk dan dinamis dengan kehidupan metropolitan yang penuh warna serta keberagaman budaya yang khas.</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='about.html?place=place2'">
+                <img src="makasar1.webp" alt="Tempat Wisata 2">
+                <div class="card-body">
+                    <h3>MAKASSAR</h3>
+                    <p>Makassar adalah kota yang eksotis dengan kekayaan budaya, sejarah, dan keindahan alam yang memikat.</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='about.html?place=place3'">
+                <img src="NTT1.jpg" alt="Tempat Wisata 3">
+                <div class="card-body">
+                    <h3>NUSA TENGGARA TIMUR</h3>
+                    <p>NTT adalah provinsi yang menawan dengan pulau-pulau yang indah, budaya yang kaya, dan keanekaragaman hayati yang luar biasa.</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='about.html?place=place4'">
+                <img src="papua1.jpg" alt="Tempat Wisata 4">
+                <div class="card-body">
+                    <h3>PAPUA</h3>
+                    <p>Papua adalah wilayah yang menakjubkan dengan keindahan alam yang memukau, budaya yang unik, dan keanekaragaman hayati yang kaya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content">
+        <h2>Indonesian Culture</h2>
+        <div class="gallery">
+            <div class="card" onclick="location.href='about.html?place=place1'">
+                <img src="taritopeng1.jpg" alt="kebudayaan 1">
+                <div class="card-body">
+                    <h3>Tari Topeng Betawi</h3>
+                    <p>Tari Topeng Betawi adalah salah satu tarian adat masyarakat betawi yang menggunakan topeng sebagai ciri khasnya. Tari topeng Betawi awalnya dipentaskan secara berkeliling oleh para seniman. Mereka biasanya diundang sebagai pengisi hiburan dalam acara seperti pesta pernikahan, khitanan dan lainnya.</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='about.html?place=place2'">
+                <img src="taripakarena.webp" alt="kebudayaan2">
+                <div class="card-body">
+                    <h3>Tari Pakarena</h3>
+                    <p>TTari Pakarena dan sepasang instrument alat semacam suling (puik-puik). Selain tari pakarena yang selama ini dimainkan oleh maestro tari pakarena Coppong Daeng Rannu (alm) di kabupaten Gowa</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='about.html?place=place3'">
+                <img src="taricerana.jpg" alt="kebudayaan 3">
+                <div class="card-body">
+                    <h3>Tari Cerana</h>
+                    <p>Tari cerana merupakan tari selamat datang atau tarian penyambutan yang khas dari Kupang, Provinsi Nusa Tenggara Timur (NTT). Tarian ini biasanya diakhiri dengan menyajikan sirih dan pinang di dalam cerana sebagai simbol dari penerimaan masyarakt terhadap tamunya dengan hati yang tulus, bersih dan penuh kasih.</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='about.html?place=place4'">
+                <img src="tarisoanggi.jpg" alt="kebudayaan 4">
+                <div class="card-body">
+                    <h3>Tari Soanggi</h>
+                    <p>Tari Soanggi atau Tari Suanggi adalah tarian adat yang berasal dari daerah pantai Teluk Cendrawasih, Kabupaten Waropen, Provinsi Papua. Eksistensi awal tari ini tidak begitu jelas, tetapi tarian tersebut merupakan salah satu bentuk ekspresi masyarakat Papua Barat yang masih kental dengan nuansa magis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Indonesian Tourism | Nila Prawitasari</p>
+    </footer>
+</body>
+</html>
